@@ -40,5 +40,4 @@ class App < Sinatra::Base
       "#{@number_1/@number_2}"
     end
   end
-  end 
 end
