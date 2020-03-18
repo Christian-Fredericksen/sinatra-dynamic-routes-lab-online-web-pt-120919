@@ -11,6 +11,4 @@ class App < Sinatra::Base
     @number = params[:number]
     "#{@number.square}"
   end
-  
-  
 end
