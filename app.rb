@@ -22,7 +22,5 @@ class App < Sinatra::Base
     end
     "#{@the_product}"
   end
-    
-  end 
   
 end
