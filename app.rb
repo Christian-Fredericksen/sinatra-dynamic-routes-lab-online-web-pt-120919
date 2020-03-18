@@ -28,7 +28,7 @@ class App < Sinatra::Base
   end
   
   get "/:operation/:number1/:number2" do
-    @answer = ""
+    @solved = ""
     @number_1 = params[:number1].to_i
     @number_2 = params[:number2].to_i
     if params[:operation] == "add"
@@ -40,6 +40,6 @@ class App < Sinatra::Base
     elsif params[:operation] == "divide"
       @answer = "#{@number_1/@number_2}"
     end
-    @answer +="#{@answer}"
+    @solved +="#{@answer}"
   end
 end
