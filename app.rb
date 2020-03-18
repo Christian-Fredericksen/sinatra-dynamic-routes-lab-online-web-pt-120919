@@ -33,6 +33,7 @@ class App < Sinatra::Base
     @number_2 = params[:number2].to_i
     if params[:operation] == "add"
       @answer += "#{@number_1+@number_2}"
+      
     elsif params[:operation] == "subtract"
       @answer += "#{@number_1-@number_2}"
     elsif params[:operation] == "multiply"
