@@ -27,8 +27,7 @@ class App < Sinatra::Base
     "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
   end
   
-  get '/:operation/:number1/:number2' do 
-    get "/:operation/:number1/:number2" do
+  get "/:operation/:number1/:number2" do
     @number_1 = params[:number1].to_i
     @number_2 = params[:number2].to_i
     if params[:operation] == "add"
@@ -40,5 +39,6 @@ class App < Sinatra::Base
     elsif params[:operation] == "divide"
       "#{@number_1/@number_2}"
     end
+  end
   end 
 end
