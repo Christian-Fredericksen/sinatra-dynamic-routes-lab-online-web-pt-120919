@@ -28,18 +28,18 @@ class App < Sinatra::Base
   end
   
   get "/:operation/:number1/:number2" do
-    @solved = ""
+    @answer = ""
     @number_1 = params[:number1].to_i
     @number_2 = params[:number2].to_i
     if params[:operation] == "add"
-      @answer = "#{@number_1+@number_2}"
+      @answer += "#{@number_1+@number_2}"
     elsif params[:operation] == "subtract"
-      @answer = "#{@number_1-@number_2}"
+      @answer += "#{@number_1-@number_2}"
     elsif params[:operation] == "multiply"
-      @answer = "#{@number_1*@number_2}"
+      @answer += "#{@number_1*@number_2}"
     elsif params[:operation] == "divide"
-      @answer = "#{@number_1/@number_2}"
+      @answer += "#{@number_1/@number_2}"
     end
-    @solved +="#{@answer}"
+    "#{@answer}"
   end
 end
